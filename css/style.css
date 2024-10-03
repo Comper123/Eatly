@@ -1,0 +1,192 @@
+/* ! Файл с общими стилями всех страниц */
+/* Обнуление сайта */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+/* Словарь констант */
+:root{
+    --body: #F9F9F9;
+    --fiol: #5C4EAE;
+    --gre: #606060;
+    --border: #CBCBCB;
+    --login: #606060;
+    --hr: rgba(32, 31, 31, 0.2);
+    --base_width: 1500px;
+    --dish-text: #676767;
+    --count: #334155;
+    --y_stat: #DAA31A;
+    --y_stat_bg: #F7EDD0;
+    --r_stat: #FB471D;
+    --r_stat_bg: #F7C5BA;
+    --g_stat: #309D5B;
+    --g_stat_bg: #33ac6439;
+}
+
+/* ? Общие стили */
+.fiol{
+    color: var(--fiol);
+}
+.flex{
+    display: flex;
+}
+.center{
+    align-items: center;
+    justify-content: center;
+}
+.beetween{
+    justify-content: space-between;
+}
+.link_fill{
+    color: white;
+    background-color: var(--fiol);
+    border-radius: 20px;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+}
+.link_bordered{
+    color: var(--fiol);
+    border: var(--fiol) solid 2px;
+    border-radius: 20px;
+    padding: 20px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+.phone_hr{
+    width: 85%;
+    margin: 50px auto;
+    border: solid 1px #CBCBCB;
+}
+
+
+/* ? body */
+body{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--body);
+    overflow-x: hidden;
+}
+/* ? header */
+header{
+    width: var(--base_width);
+    margin: auto;
+    display: flex;
+    height: 150px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: var(--border) 2px solid;
+    article,
+    a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+    }
+    >article:nth-child(1){
+        width: 50%;
+        >article:nth-child(1){
+            margin-right: 125px;
+            .logo_text{
+                font-weight: 600;
+                color: var(--fiol);
+                font-size: 21px;
+                line-height: 27px;
+                margin-left: 25px;
+            }
+            >.logo_img{
+                width: 75px;
+                aspect-ratio: 1;
+            }
+        }
+        >article:nth-child(2){
+            width: 100%;
+            justify-content: space-between;
+            >a{
+                font-size: 18px;
+                text-decoration: none;
+                color: var(--gre);
+                font-weight: 600;
+                font-family: "Inter";
+            }
+        }
+    }
+    .reg_links{
+        width: 220px;
+        justify-content: space-between;
+        >a{
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        .link_login{
+            color: var(--login);
+        }
+    }
+}
+
+footer{
+    padding: 55px 0px;
+    width: var(--base_width);
+    height: 300px;
+    margin: auto;
+    >article{
+        display: flex;
+        justify-content: space-between;
+    }
+    >.footer_nav{
+        border-bottom: solid 1px rgba(129, 129, 129, 0.281);
+        height: 95px;
+        >.logo{
+            display: flex;
+            align-items: center;
+            >.logo_text{
+                font-weight: 600;
+                color: var(--fiol);
+                font-size: 20px;
+                line-height: 27px;
+                margin-left: 25px;
+            }
+            >.logo_img{
+                width: 44px;
+                height: 40px;
+            }
+        }
+        >.nav_links{
+            width: 500px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            >a{
+                font-size: 18px;
+                text-decoration: none;
+                color: var(--gre);
+            }
+        }
+    }
+    >.footer_social{
+        height: 120px;
+        display: flex;
+        align-items: center;
+        >article>p{
+            color: rgba(153, 153, 153, 1);
+            font-family: "Inter", sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        >.social_media{
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+            >svg{
+                transform: scale(1.4);
+            }
+        }
+    }
+}

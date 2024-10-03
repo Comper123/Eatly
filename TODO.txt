@@ -1,0 +1,5 @@
+1. Изменить scroolbar index.html .customers
++   2. Сделать нормальную тень menu.html .sales у картинки
+3. По желанию осуществить изменение стилей у выбираемых категорий menu.html .sales
+4. Ползунок в chrome не работают стили menu.html .sales
++   5. js к списку
