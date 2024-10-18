@@ -5,154 +5,323 @@
 #header>article:nth-child(1)>article:nth-child(2)>a:nth-child(2){
     color: var(--fiol);
 }
+@media screen and (min-width: 1280px){
+    /* ? promo section */
+    .promo_block{
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 50px;
+        width: var(--base_width);
+        border-radius: 30px;
+        height: 250px;
+        margin: 100px auto;
+        background-color: var(--fiol);
+        >.promo_info{
+            >h1{
+                font-size: 50px;
+                font-weight: 800;
+                color: #FFFFFF;
+            }
+            >.email_enter{
+                width: 350px;
+                height: 60px;
+                margin-top: 10px;
+                position: relative;
+                >input{
+                    width: 100%;
+                    padding: 10px 130px 10px 25px;
+                    border-radius: 12px;
+                    border: none;
+                    height: 100%;
+                    display: block;
+                    &::placeholder{
+                        color: #878787;
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                >a{
+                    position: absolute;
+                    transform: translate(238px, -54px);
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    padding: 16px;
+                    background-color: var(--fiol);
+                    border-radius: 12px;
+                    color: rgba(247, 248, 250, 1);
+                    font-size: 11px;
+                    font-weight: 500;
+                    letter-spacing: 1.5px;
+                }
 
-/* ? promo section */
-.promo_block{
-    display: flex;
-    justify-content: space-between;
-    padding: 40px 50px;
-    width: var(--base_width);
-    border-radius: 30px;
-    height: 250px;
-    margin: 100px auto;
-    background-color: var(--fiol);
-    >.promo_info{
-        >h1{
-            font-size: 50px;
-            font-weight: 800;
-            color: #FFFFFF;
+            }
         }
-        >.email_enter{
-            width: 350px;
-            height: 60px;
-            margin-top: 10px;
-            position: relative;
-            >input{
-                width: 100%;
-                padding: 10px 130px 10px 25px;
-                border-radius: 12px;
-                border: none;
-                height: 100%;
-                display: block;
-                &::placeholder{
-                    color: #878787;
-                    font-size: 12px;
-                    font-weight: 400;
-                }
-                &:focus{
-                    outline: none;
-                }
+        >.promo_img{
+            padding-right: 30px;
+            >img{
+                width: 250px;
+                transform: translateY(30px);
             }
-            >a{
-                position: absolute;
-                transform: translate(238px, -54px);
-                text-decoration: none;
-                text-transform: uppercase;
-                padding: 16px;
-                background-color: var(--fiol);
-                border-radius: 12px;
-                color: rgba(247, 248, 250, 1);
-                font-size: 11px;
-                font-weight: 500;
-                letter-spacing: 1.5px;
-            }
-
         }
     }
-    >.promo_img{
-        padding-right: 30px;
-        >img{
-            width: 250px;
-            transform: translateY(30px);
+
+    /* ? articles section */
+    .articles{
+        width: var(--base_width);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        padding-top: 50px;
+        flex-direction: column;
+        margin-bottom: 250px;
+        >h1{
+            font-size: 45px;
+            font-weight: 600;
+        }
+        >.articles_block{
+            display: grid;
+            grid-template-columns: 400px 400px 400px;
+            grid-gap: 80px;
+            margin-top: 100px;
+            margin-bottom: 150px;
+            >a{
+                background-color: white;
+                box-shadow: rgba(0,0,0,0.1) 15px 15px 45px 2px;
+                /* height: 400px; */
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding-top: 25px;
+                border-radius: 22px;
+                text-decoration: none;
+                color: black;
+                transition: .6s;
+                &:hover{
+                    transition: .6s;
+                    box-shadow: rgba(0,0,0,0.2) 15px 15px 45px 2px;
+                    transform: scale(1.1);
+                }
+                >img{
+                    width: 350px;
+                    height: 350px;
+                    border-radius: 22px;
+                }
+                >p{
+                    width: 100%;
+                    padding-left: 26px;
+                    margin: 20px 0;
+                    font-size: 22px;
+                    font-weight: 600;
+                }
+                >.autor{
+                    display: flex;
+                    padding: 0 25px;
+                    width: 100%;
+                    margin-bottom: 25px;
+                    height: 60px;
+                    >img{
+                        height: 45px;
+                        width: 45px;
+                        margin-right: 16px;
+                    }
+                    >article{
+                        display: flex;
+                        flex-direction: column;
+                        /* gap: 6px; */
+                        >.com{
+                            font-size: 12px;
+                            font: 400;
+                            color: #8D8D8D;
+                        }
+                        >.name{
+                            font-size: 17px;
+                            font-weight: 500;
+                        }
+                    }
+                    >.date{
+                        margin-left: auto;
+                        align-self: center;
+                        color: #B7B4B4;
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        >article{
+            display: flex;
+            gap: 100px;
         }
     }
 }
 
-/* ? articles section */
-.articles{
-    width: var(--base_width);
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    padding-top: 50px;
-    flex-direction: column;
-    margin-bottom: 250px;
-    >h1{
-        font-size: 45px;
-        font-weight: 600;
-    }
-    >.articles_block{
-        display: grid;
-        grid-template-columns: 400px 400px 400px;
-        grid-gap: 80px;
+@media screen and (max-width: 500px){
+    /* ? promocode section */
+    .promo_block{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px 50px;
+        width: 85%;
+        border-radius: 30px;
+        height: 250px;
+        margin: 0 auto;
         margin-top: 100px;
+        background-color: var(--fiol);
         margin-bottom: 150px;
-        >a{
-            background-color: white;
-            box-shadow: rgba(0,0,0,0.1) 15px 15px 45px 2px;
-            /* height: 400px; */
+        >.promo_info{
             display: flex;
-            align-items: center;
             flex-direction: column;
-            padding-top: 25px;
-            border-radius: 22px;
-            text-decoration: none;
-            color: black;
-            transition: .6s;
-            &:hover{
-                transition: .6s;
-                box-shadow: rgba(0,0,0,0.2) 15px 15px 45px 2px;
-                transform: scale(1.1);
-            }
-            >img{
-                width: 350px;
-                height: 350px;
-                border-radius: 22px;
-            }
-            >p{
+            align-items: center;
+            >h1{
+                font-size: 40px;
                 width: 100%;
-                padding-left: 26px;
-                margin: 20px 0;
-                font-size: 22px;
-                font-weight: 600;
+                text-align: center;
+                font-weight: 800;
+                color: #FFFFFF;
             }
-            >.autor{
-                display: flex;
-                padding: 0 25px;
-                width: 100%;
-                margin-bottom: 25px;
-                height: 60px;
-                >img{
-                    height: 45px;
-                    width: 45px;
-                    margin-right: 16px;
+            >.email_enter{
+                width: 120%;
+                height: 30px;
+                margin-top: 10px;
+                position: relative;
+                >input{
+                    width: 100%;
+                    padding: 10px 80px 10px 25px;
+                    border-radius: 6px;
+                    border: none;
+                    font-size: 8px;
+                    height: 100%;
+                    display: block;
+                    &::placeholder{
+                        color: #878787;
+                        font-size: 8px;
+                        font-weight: 400;
+                    }
+                    &:focus{
+                        outline: none;
+                    }
                 }
-                >article{
+                >a{
+                    position: absolute;
+                    right: 2%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    height: 80%;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    padding: 0px 10px;
+                    background-color: var(--fiol);
+                    border-radius: 6px;
+                    color: #F7F8FA;
+                    font-size: 9px;
                     display: flex;
-                    flex-direction: column;
-                    /* gap: 6px; */
-                    >.com{
-                        font-size: 12px;
-                        font: 400;
-                        color: #8D8D8D;
-                    }
-                    >.name{
-                        font-size: 17px;
-                        font-weight: 500;
-                    }
+                    align-items: center;
+                    font-weight: 400;
                 }
-                >.date{
-                    margin-left: auto;
-                    align-self: center;
-                    color: #B7B4B4;
-                    font-size: 16px;
-                    font-weight: 500;
-                }
+
+            }
+        }
+        >.promo_img{
+            >img{
+                width: 200px;
+                transform: translateY(30px);
             }
         }
     }
-    >article{
+
+    /* ? articles section */
+    .articles{
+        width: var(--base_width);
+        margin: 0 auto;
         display: flex;
-        gap: 100px;
+        align-items: center;
+        padding-top: 50px;
+        flex-direction: column;
+        margin-bottom: 250px;
+        >h1{
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: -40px;
+        }
+        >.articles_block{
+            display: flex;
+            flex-direction: column;
+            gap: 45px;
+            width: 70%;
+            margin-top: 100px;
+            margin-bottom: 150px;
+            >a{
+                background-color: white;
+                box-shadow: rgba(0,0,0,0.2) 15px 15px 45px 2px;
+                /* height: 400px; */
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding-top: 25px;
+                border-radius: 22px;
+                text-decoration: none;
+                color: black;
+                transition: .6s;
+                &:hover{
+                    transition: .6s;
+                    box-shadow: rgba(0,0,0,0.3) 15px 15px 45px 2px;
+                    transform: scale(1.1);
+                }
+                >img{
+                    width: 90%;
+                    border-radius: 22px;
+                }
+                >p{
+                    width: 100%;
+                    padding-left: 26px;
+                    margin: 20px 0;
+                    font-size: 15px;
+                    font-weight: 600;
+                }
+                >.autor{
+                    display: flex;
+                    align-items: center;
+                    padding: 0 25px;
+                    width: 100%;
+                    margin-bottom: 25px;
+                    height: 60px;
+                    >img{
+                        height: 30px;
+                        width: 30px;
+                        margin-right: 6px;
+                    }
+                    >article{
+                        display: flex;
+                        flex-direction: column;
+                        /* gap: 6px; */
+                        >.com{
+                            font-size: 8px;
+                            font: 400;
+                            color: #8D8D8D;
+                        }
+                        >.name{
+                            font-size: 11px;
+                            font-weight: 500;
+                        }
+                    }
+                    >.date{
+                        margin-left: auto;
+                        align-self: center;
+                        color: #B7B4B4;
+                        font-size: 11px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+        >article{
+            display: flex;
+            gap: 100px;
+            margin: -100px 0px -100px 0;
+        }
     }
 }
